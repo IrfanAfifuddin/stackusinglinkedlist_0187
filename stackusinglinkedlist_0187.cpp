@@ -80,4 +80,7 @@ int main()
 		cout << "4. Exit\n";
 		cout << "Enter your choice: \n";
 		cin >> choice;
+
+		switch (choice){
+
 }
