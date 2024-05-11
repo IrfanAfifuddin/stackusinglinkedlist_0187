@@ -37,18 +37,19 @@ public:
 		if (isEmpty())
 		{
 			cout << "Stack is empty." << endl;
+			return;
 		}
 		cout << "Popped value: " << top->data << endl;
 		top = top->next;
 	}
 
-    void peek() 
-    {
-	    if (top == NULL)
-	    {
-		     cout << "List is empty." << endl;
-	    }
-		else {
+	void peek() {
+		if (top == NULL)
+		{
+			cout << "List is empty." << endl;
+		}
+		else 
+		{
 			Node* current = top;
 			while (current != NULL)
 			{
@@ -56,12 +57,12 @@ public:
 				current = current->next;
 			}
 			cout << endl;
-
-			bool isEmpty()
-			{
-				return top == NULL;
-			}
 		}
+	}
+	bool isEmpty()
+	{
+		return top == NULL;
+	}
 };
 
 
@@ -95,6 +96,7 @@ int main()
 				cout << "Stack is empty. Cannot pop" << endl;
 			}
 			break;
+
 		case 3:
 			if (!stack.isEmpty()) {
 				stack.peek();
@@ -112,5 +114,6 @@ int main()
 		}
 		cout << endl;
 	}
-	return 0;
+
+	return 0;
 }
