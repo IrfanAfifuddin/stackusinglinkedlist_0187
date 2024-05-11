@@ -43,6 +43,11 @@ public:
 	}
 };
 
+void peek() 
+{
+
+}
+
 int main()
 {
     
